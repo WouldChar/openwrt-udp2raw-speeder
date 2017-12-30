@@ -32,7 +32,7 @@ define Package/udpspeeder
 	CATEGORY:=Network
 	TITLE:=UDP Network Speed-Up Tool
 	URL:=https://github.com/wangyu-/UDPspeeder
-	DEPENDS:= +libstdcpp
+	DEPENDS:= +libstdcpp +librt
 endef
 
 define Package/udpspeeder/description
