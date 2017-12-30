@@ -45,7 +45,7 @@ define Build/Prepare
 	$(PKG_UNPACK)
 	sed -i 's/cc_cross=.*/cc_cross=$(TARGET_CXX)/g' $(PKG_BUILD_DIR)/makefile
 	sed -i '/\*gitversion/d' $(PKG_BUILD_DIR)/makefile
-	echo 'const char *gitversion = "$(PKG_SOURCE_VERSION)";' > $(PKG_BUILD_DIR)/git_version.h
+	echo 'const char *gitversion = "$(PKG_VERSION)";' > $(PKG_BUILD_DIR)/git_version.h
 	$(Build/Patch)
 endef
 
