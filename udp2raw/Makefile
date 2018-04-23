@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=udp2raw-tunnel
-PKG_VERSION:=20171125.0
+PKG_VERSION:=20180225.0
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/wangyu-/udp2raw-tunnel.git
-PKG_SOURCE_VERSION:=b35edf74865275cdc970384681a1a076d3a8d0e1
+PKG_SOURCE_VERSION:=2c67c319b70e7452044bb049d1d98896807464bb
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
 
@@ -50,7 +50,6 @@ define Build/Prepare
 endef
 
 define Package/udp2raw-tunnel/install
-	$(TOOLCHAIN_DIR)/bin/$(REAL_GNU_TARGET_NAME)-strip $(PKG_BUILD_DIR)/udp2raw_cross
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/udp2raw_cross $(1)/usr/bin/udp2raw
 endef

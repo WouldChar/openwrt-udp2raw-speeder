@@ -50,7 +50,6 @@ define Build/Prepare
 endef
 
 define Package/udpspeeder/install
-	$(TOOLCHAIN_DIR)/bin/$(REAL_GNU_TARGET_NAME)-strip $(PKG_BUILD_DIR)/speederv2_cross
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/speederv2_cross $(1)/usr/bin/udpspeeder
 endef
